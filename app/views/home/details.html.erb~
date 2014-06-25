@@ -44,7 +44,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right" style="background:rgba(255,255,255, 0.3)">
+                <ul class="nav navbar-nav navbar-right" style="background:white">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -84,10 +84,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 style="color:#fff">Portfolio</h2>
+			<h4 style="color:white">Yet to Add</h4>
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
+            <!--div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -147,7 +148,7 @@
                         </div>
                         <img src="img/portfolio/submarine.png" class="img-responsive" alt="" />
                     </a>
-                </div>
+                </div-->
             </div>
         </div>
     </section>
@@ -162,15 +163,14 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>A lot about me is yet to fill these places.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>Here too!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="http://startbootstrap.com/freelancer" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
-                    </a>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -186,21 +186,21 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form role="form">
-                        <div class="row">
-                            <div class="form-group col-xs-12 floating-label-form-group">
+                    <form role="form" >
+                        <div class="row" >
+                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:#FFFF00" >
                                 <label for="name">Name</label>
                                 <input class="form-control" type="text" name="name" placeholder="Name">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-xs-12 floating-label-form-group">
+                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:#FE9A2E">
                                 <label for="email">Email Address</label>
                                 <input class="form-control" type="email" name="email" placeholder="Email Address">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-xs-12 floating-label-form-group">
+                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:white">
                                 <label for="message">Message</label>
                                 <textarea placeholder="Message" class="form-control" rows="5"></textarea>
                             </div>
@@ -223,8 +223,8 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                        <p>Currently Livig in Chennai.
+                            <br>From Thanjavur.</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -242,8 +242,8 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelance</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <!--h3>About Freelance</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p-->
                     </div>
                 </div>
             </div>
@@ -252,7 +252,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; 2014 - Your Name
+                        Copyright &copy; 2014 - Saleem
                     </div>
                 </div>
             </div>
