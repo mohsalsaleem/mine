@@ -30,10 +30,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+ /* background-color: #000*/;
+  background-image: image-url("bg.jpg");
 }
 body {
-  color: #fff;
+  color: #000;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   box-shadow: inset 0 0 100px rgba(0,0,0,.5);
@@ -112,6 +113,7 @@ body {
 
 .cover {
   padding: 0 20px;
+ color:#fff
 }
 .cover .btn-lg {
   padding: 10px 20px;

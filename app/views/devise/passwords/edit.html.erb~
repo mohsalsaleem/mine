@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Password Change</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,13 +38,13 @@
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><%= link_to "Home" , root_path%></li>
+                <li><%= link_to "Home" , root_path%></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             <% if user_signed_in? %>
-  Hello, <strong><%= current_user.email %></strong>.
+  <li>Hello, <strong><%= current_user.email %></strong>.</li>
   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
-<li>  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+<li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
 <% else %>
   <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li> |
  <li> <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
@@ -52,26 +52,30 @@
              </ul>
             </div>
           </div>
-<h3>CHenge your Password<h3>
+<h3>Change your Password<h3>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put , :class=>"form-signin"}) do |f| %>
   <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+  <%= f.hidden_field :reset_password_token , :class=>"form-control"%>
 
   <div><%= f.label :password, "New password" %><br />
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %></div>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", :class=>"form-control" %></div>
 
   <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <%= f.password_field :password_confirmation, autocomplete: "off" , :class=>"form-control"%></div>
 
-  <div><%= f.submit "Change my password" %></div>
+  <div><%= f.submit "Change my password", :class=>"btn btn-lg btn-primary btn-block" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+             <ul class="nav masthead-nav">		
+		<li><p>Thanks for Bootstrap<p><li/>              
+		<li><%=link_to image_tag("facebook.png",size:"50x45") , "https://www.facebook.com/mohsal.saleem"%></li>
+		<li><%=link_to image_tag("github1.jpeg",size:"45x45"),"https://github.com/mohsalsaleem"%></li>
+        </ul>
             </div>
           </div>
 

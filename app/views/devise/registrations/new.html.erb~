@@ -43,12 +43,12 @@
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><%= link_to "Home" , root_path%></li>
+                <li ><%= link_to "Home" , root_path%></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             <% if user_signed_in? %>
   Hello, <strong><%= current_user.email %></strong>.
-  <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>  |
 <li>  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
 <% else %>
   <li class="active"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li> |
@@ -75,7 +75,11 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <ul class="nav masthead-nav">		
+		<li><p>Thanks for Bootstrap<p><li/>              
+		<li><%=link_to image_tag("facebook.png",size:"50x45") , "https://www.facebook.com/mohsal.saleem"%></li>
+		<li><%=link_to image_tag("github1.jpeg",size:"45x45"),"https://github.com/mohsalsaleem"%></li>
+        </ul>
             </div>
           </div>
 

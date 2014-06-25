@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Edit</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,8 +43,7 @@
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             <% if user_signed_in? %>
-  Hello, <strong><%= current_user.email %></strong>.
-  <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
+  <li class="active"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
 <li>  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
 <% else %>
   <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li> |
@@ -53,40 +52,42 @@
              </ul>
             </div>
           </div>
+<br/><br/>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class=>"form-signin" }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div>
   <%= f.email_field :email, autofocus: true,:class=>"form-control" %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off",:class=>"form-control" %></div>
+  <div>
+    <%= f.password_field :password, autocomplete: "off",:class=>"form-control" ,:placeholder=>"Password(leave blank if you don't want to change it)"%></div>
+    <div><%= f.password_field :password_confirmation, autocomplete: "off" ,:class=>"form-control" ,:placeholder=>"Confirm Password"%></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" ,:class=>"form-control"%></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off",:class=>"form-control" %></div>
+  <div>
+    <%= f.password_field :current_password, autocomplete: "off",:class=>"form-control",:placeholder=>"Current password to confirm your changes" %></div>
 
   <div><%= f.submit "Update" , :class=>"btn btn-lg btn-primary btn-block" %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
+</div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name),:class=>"btn btn-danger", data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back ,:class=>"btn btn-lnk" %>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                    <ul class="nav masthead-nav">		
+		<li><p>Thanks for Bootstrap<p><li/>              
+		<li><%=link_to image_tag("facebook.png",size:"50x45") , "https://www.facebook.com/mohsal.saleem"%></li>
+		<li><%=link_to image_tag("github1.jpeg",size:"45x45"),"https://github.com/mohsalsaleem"%></li>
+        </ul>
             </div>
           </div>
 
