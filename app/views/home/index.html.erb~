@@ -54,7 +54,7 @@
             <p class="lead">Welcome to my Official Website.I am Saleem,pursuing<strong> B.Tech </strong>, Open Source Enthusiast , Open World Gamer , Technology Lover and I'm Lazy . </p>
 	
             <p class="lead">
-              <%= link_to "To know more", :class=>"btn btn-lg btn-default", { :controller=>"home", :action=>"details"}%>
+              <%= link_to "To know more", { :controller=>"home", :action=>"details"}, :class=>"btn btn-lg btn-default" %>
             </p>
           </div>
 
