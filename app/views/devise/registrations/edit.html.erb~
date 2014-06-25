@@ -39,7 +39,7 @@
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <ul class="nav masthead-nav">
-                <li><%= link_to "Home" , root_path%></li>
+                <li class="active"><%= link_to "Home" , root_path%></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             <% if user_signed_in? %>

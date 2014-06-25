@@ -1,16 +1,104 @@
-<h2>Change your password</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><%= link_to "Home" , root_path%></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            <% if user_signed_in? %>
+  Hello, <strong><%= current_user.email %></strong>.
+  <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
+<li>  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+<% else %>
+  <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li> |
+ <li> <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+<% end %>
+             </ul>
+            </div>
+          </div>
+<h3>CHenge your Password<h3>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+  <%= f.hidden_field :reset_password_token , :class=>"form-control"%>
 
-  <div><%= f.label :password, "New password" %><br />
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %></div>
+  <div><%= f.label :password, "New password", :class=>"form-control" %><br />
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", :class=>"form-control" %></div>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <div><%= f.label :password_confirmation, "Confirm new password", :class=>"form-control" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" , :class=>"form-control"%></div>
 
-  <div><%= f.submit "Change my password" %></div>
+  <div><%= f.submit "Change my password", :class=>"form-control" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

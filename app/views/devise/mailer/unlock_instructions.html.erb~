@@ -1,4 +1,8 @@
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,7 +43,7 @@
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <ul class="nav masthead-nav">
-                <li><%= link_to "Home" , root_path%></li>
+                <li class="active"><%= link_to "Home" , root_path%></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact</a></li>
             <% if user_signed_in? %>
@@ -54,35 +58,14 @@
             </div>
           </div>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<p>Hello <%= @resource.email %>!</p>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true,:class=>"form-control" %></div>
+<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+<p>Click the link below to unlock your account:</p>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off",:class=>"form-control" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" ,:class=>"form-control"%></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off",:class=>"form-control" %></div>
-
-  <div><%= f.submit "Update" , :class=>"btn btn-lg btn-primary btn-block" %></div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
 
           <div class="mastfoot">
             <div class="inner">
@@ -104,5 +87,12 @@
     <script src="../../assets/js/docs.min.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
 
 
