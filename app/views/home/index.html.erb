@@ -34,8 +34,16 @@
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
+        <div class="navbar-header page-scrool">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="bs-example-navbar-collapse-1">
+	<span class="sr-only">Toggle Navigation</span>
+	<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+		</button>
+	</div>
+	 <div class="masthead clearfix">
+            <div class="inner" id="bs-example-navbar-collapse-1">
               <%= link_to image_tag("cover.png"), {controller:"home",action:"index"}, :class=>"masthead-brand" %>
               <ul class="nav masthead-nav">
                 <li class="active"><%= link_to "Hello" , root_path%></li>
