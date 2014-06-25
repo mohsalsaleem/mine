@@ -39,7 +39,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: image-url("dep.jpg");
+  background-image: image-url("bg.jpg");
  /* background-color: #000;*/
 }
 body {
