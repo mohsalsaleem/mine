@@ -69,11 +69,11 @@
             <div class="inner">
 	<ul class="nav masthead-nav">
 		<li><p>Follow Me!<p><li/>              
-		<li><%=link_to image_tag("facebook.png",size:"50x45") , "https://www.facebook.com/mohsal.saleem"%></li>
-		<li><%=link_to image_tag("github1.jpeg",size:"45x45"),"https://github.com/mohsalsaleem"%></li>
-		<li><%=link_to image_tag("quora.jpeg",size:"45x45"),"http://www.quora.com/Mohamed-Saleem-4"%></li>
-		<li><%=link_to image_tag("bit.jpeg",size:"45x45"),"https://bitbucket.com/mohsalsaleem"%></li>
-		<li><%=link_to image_tag("linkedin.jpeg",size:"45x45"),"http://in.linkedin.com/pub/mohamed-saleem/60/3b3/681"%></li>
+		<li><%=link_to image_tag("facebook.png",size:"35x35") , "https://www.facebook.com/mohsal.saleem"%></li>
+		<li><%=link_to image_tag("github1.jpeg",size:"35x35"),"https://github.com/mohsalsaleem"%></li>
+		<li><%=link_to image_tag("quora.jpeg",size:"35x35"),"http://www.quora.com/Mohamed-Saleem-4"%></li>
+		<li><%=link_to image_tag("bit.jpeg",size:"35x35"),"https://bitbucket.com/mohsalsaleem"%></li>
+		<li><%=link_to image_tag("linkedin.jpeg",size:"35x35"),"http://in.linkedin.com/pub/mohamed-saleem/60/3b3/681"%></li>
             </div>
           </div>
 
