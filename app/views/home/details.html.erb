@@ -2,12 +2,29 @@
 <html lang="en">
 
 <head>
+<script>
+if (localStorage.getItem('loadedOnce') === 'true') {
+    // don't reload page, but clear localStorage value so it'll get reloaded next time
+    localStorage.removeItem('loadedOnce');
+} else {
+    // set the flag and reload the page
+    localStorage.setItem('loadedOnce', 'true');
+    document.location.reload(true);
+}
 
+
+function sendMail() {
+    var link = "mailto:mohsal.saleem@gmail.com"
+             + "&subject=" + escape("LazyGuy")
+             + "&body=" + escape("From :"+document.getElementById('Name').value+"\nMail:"+document.getElementById('Email').value+"\nMessage:"+document.getElementById('Message').value);
+
+    window.location.href = link;
+}
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Know More About Me</title>
 
     <!-- Bootstrap Core CSS -->
@@ -26,7 +43,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" >
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -84,11 +101,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 style="color:#fff">Portfolio</h2>
-			<h4 style="color:white">Yet to Add</h4>
+			<h4 style="color:white">The works I have done apart from this page is a basic website with corrutpion theme as a part of the experimenting with RoR in FSFTN workshop,held at IIT Madras and some other. Find them below.</h4>
+			<p style="color:orange">And..This website is also by me.<p>
                     <hr class="star-primary">
                 </div>
             </div>
-            <!--div class="row">
+            <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -96,18 +114,19 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="" />
-                    </a>
+			<%=image_tag "paypal.jpeg", size:"1000x1600" ,:class=>"img-responsive"  %>
+                     </a>   
+                    
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <!--a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="" />
-                    </a>
+                        
+                    </a-->
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
@@ -116,10 +135,10 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="" />
+                        <%=image_tag "corruption.jpeg", size:"1500x1600" ,:class=>"img-responsive"  %>
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <!--div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -196,23 +215,23 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form role="form" >
+                    <form role="form" class="form-signin" >
                         <div class="row" >
-                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:#FFFF00" >
+                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:white" >
                                 <label for="name">Name</label>
-                                <input class="form-control" type="text" name="name" placeholder="Name">
+                                <input class="form-control" type="text" name="name" placeholder="Name" id="Name">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:#FE9A2E">
+                            <div class="form-group col-xs-12 floating-label-form-group" style="background-color:white">
                                 <label for="email">Email Address</label>
-                                <input class="form-control" type="email" name="email" placeholder="Email Address">
+                                <input class="form-control" type="email" name="email" placeholder="Email Address" id="Email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-12 floating-label-form-group" style="background-color:white">
                                 <label for="message">Message</label>
-                                <textarea placeholder="Message" class="form-control" rows="5"></textarea>
+                                <textarea placeholder="Message" class="form-control" rows="5" id="Message"></textarea>
                             </div>
                         </div>
                         <br>
@@ -239,15 +258,15 @@
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            <li>  <%=link_to image_tag("facebook.png",size:"35x35") , "https://www.facebook.com/mohsal.saleem" ,:class=>"btn-social btn-outline"%><i class="fa fa-fw fa-facebook"></i>
                             </li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            <li><%=link_to image_tag("bit.jpeg",size:"35x35"),"https://bitbucket.com/mohsalsaleem", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-google-plus"></i>
                             </li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            <li><%=link_to image_tag("github1.jpeg",size:"35x35"),"https://github.com/mohsalsaleem" ,:class=>"btn-social btn-outline"%><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <li><%=link_to image_tag("linkedin.jpeg",size:"35x35"),"http://in.linkedin.com/pub/mohamed-saleem/60/3b3/681", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-linkedin"></i>
                             </li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            <li><%=link_to image_tag("quora.jpeg",size:"35x35"),"http://www.quora.com/Mohamed-Saleem-4", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-dribbble"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -288,16 +307,16 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Paypal</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <%=image_tag "paypal.jpeg", size:"1000x1600" ,:class=>"img-responsive"  %>
+                            <p>Well..This was our first Hackathon ever participated.The theme was to build an application that can login into paypal account without a click.It was actually a disaster for us. We , a group of four ,myself,and three of my friends- Abilash,Dhandapani and Edwin decided to do an application that can login into an account using GPS.</p>
                             <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                <li>At: <strong>Kurukshetra</strong>
                                 </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                <li>Venue<strong>College of Engineering,Guindy</strong>
                                 </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                <li>Platform: <strong>Windows 8</strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -307,7 +326,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -319,16 +338,16 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Corruption</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <%=image_tag "corruption.jpeg", size:"1500x1600" ,:class=>"img-responsive"  %>
+                            <p>After an hands-on Ruby on Rails session with Vysakh , a web developer, we were givin the topic Corruption and were asked to build a basic website explaining Corruption in India.And It did come out as I expected. Ashish Jain , a guy in our team helped me with the resources and I did the complete technical part.</p>
                             <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                <li>At: <strong><%=link_to "FSFTN", "http://www.fsftn.org" , :confirm=>"Leaving this page?" %> Summer Workshop.</strong>
                                 </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                <li>Venue: <strong>IIT Madras</strong>
                                 </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                <li>Platform: <strong>Web Development</strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -338,7 +357,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">

@@ -16,7 +16,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #000;/*#18bc9c*/;
 }
 
 h1,
@@ -102,6 +102,7 @@ header .intro-text .name {
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+    color:#fff;
 }
 
 @media(min-width:768px) {
