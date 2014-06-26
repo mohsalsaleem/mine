@@ -27,12 +27,9 @@ function sendMail() {
     <meta name="author" content="">
     <title>Know More About Me</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/freelancer.css" rel="stylesheet" type="text/css">
-
+    
     <!-- Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- IE8 support for HTML5 elements and media queries -->
@@ -181,7 +178,7 @@ function sendMail() {
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Hello.I am Saleem,pursuing B.Tech IT in College of Engineering,Guindy.I love Gaming, Coding. I am an open source enthusiast. I like knowing the nooks and corners of mobile phones. I have used Symbian,Java,Android,Meego (Never mind about iOS). I have started Web development and have been learning RoR , HTML and CSS. This is my second website and the first is the one about Corruption.I Have solved some problems in SPOJ. </p>
+                    <p>Hello.I am Saleem,pursuing B.Tech IT in College of Engineering,Guindy.I love Gaming, Coding. I am an open source enthusiast. I like knowing the nooks and corners of mobile phones. I have used Symbian,Java,Android,Meego (Never mind about iOS). I have started Web development and have been learning RoR , HTML and CSS. This is my second website and the first is the one about Corruption.I Love Music. My favourite is A.R.Rahman  </p>
                 </div>
                 <div class="col-lg-4">
                     <!-- Place this tag where you want the widget to render. -->
@@ -255,23 +252,23 @@ function sendMail() {
                             <br>From Thanjavur.</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
+                        <h3>Find me here</h3>
                         <ul class="list-inline">
-                            <li>  <%=link_to image_tag("facebook.png",size:"35x35") , "https://www.facebook.com/mohsal.saleem" ,:class=>"btn-social btn-outline"%><i class="fa fa-fw fa-facebook"></i>
+                            <li>  <%=link_to image_tag("facebook.png",size:"35x35") , "https://www.facebook.com/mohsal.saleem" ,:class=>"btn-social btn-outline"%>
                             </li>
-                            <li><%=link_to image_tag("bit.jpeg",size:"35x35"),"https://bitbucket.com/mohsalsaleem", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-google-plus"></i>
+                            <li><%=link_to image_tag("bit.jpeg",size:"35x35"),"https://bitbucket.com/mohsalsaleem", :class=>"btn-social btn-outline"%>
                             </li>
-                            <li><%=link_to image_tag("github1.jpeg",size:"35x35"),"https://github.com/mohsalsaleem" ,:class=>"btn-social btn-outline"%><i class="fa fa-fw fa-twitter"></i></a>
+                            <li><%=link_to image_tag("github1.jpeg",size:"35x35"),"https://github.com/mohsalsaleem" ,:class=>"btn-social btn-outline"%>
                             </li>
-                            <li><%=link_to image_tag("linkedin.jpeg",size:"35x35"),"http://in.linkedin.com/pub/mohamed-saleem/60/3b3/681", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-linkedin"></i>
+                            <li><%=link_to image_tag("linkedin.jpeg",size:"35x35"),"http://in.linkedin.com/pub/mohamed-saleem/60/3b3/681", :class=>"btn-social btn-outline"%>
                             </li>
-                            <li><%=link_to image_tag("quora.jpeg",size:"35x35"),"http://www.quora.com/Mohamed-Saleem-4", :class=>"btn-social btn-outline"%><i class="fa fa-fw fa-dribbble"></i></a>
+                            <li><%=link_to image_tag("quora.jpeg",size:"35x35"),"http://www.quora.com/Mohamed-Saleem-4", :class=>"btn-social btn-outline"%>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <!--h3>About Freelance</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p-->
+                        <h3>Freelance</h3>
+                        <p>Contact me if needed.</p>
                     </div>
                 </div>
             </div>
