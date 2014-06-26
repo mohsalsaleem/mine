@@ -337,9 +337,9 @@ function sendMail() {
                             <h2>Corruption</h2>
                             <hr class="star-primary">
                             <%=image_tag "corruption.jpeg", size:"1500x1600" ,:class=>"img-responsive"  %>
-                            <p>After an hands-on Ruby on Rails session with Vysakh , a web developer, we were givin the topic Corruption and were asked to build a basic website explaining Corruption in India.And It did come out as I expected. Ashish Jain , a guy in our team helped me with the resources and I did the complete technical part.</p>
+                            <p>After an hands-on Ruby on Rails session with Vysakh , a web developer, we were givin the topic <u style="color:blue"><strong><%=link_to "Corruption" , "https://corruption.herokuapp.com" %></strong> </u> and were asked to build a basic website explaining Corruption in India.And It did come out as I expected. Ashish Jain , a guy in our team helped me with the resources and I did the complete technical part.</p>
                             <ul class="list-inline item-details">
-                                <li>At: <strong><%=link_to "FSFTN", "http://www.fsftn.org" , :confirm=>"Leaving this page?" %> Summer Workshop.</strong>
+                                <li>At: <strong><p style="color:blue"><%=link_to "FSFTN", "http://www.fsftn.org" , :confirm=>"Leaving this page?" %></p> Summer Workshop.</strong>
                                 </li>
                                 <li>Venue: <strong>IIT Madras</strong>
                                 </li>
